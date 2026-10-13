@@ -1,0 +1,56 @@
+{
+  "group_col": "subject",
+  "available": true,
+  "n_groups": 11,
+  "crosstab": {
+    "News": {
+      "REAL": 0,
+      "FAKE": 999
+    },
+    "financeNews": {
+      "REAL": 6,
+      "FAKE": 0
+    },
+    "generalNews": {
+      "REAL": 4,
+      "FAKE": 0
+    },
+    "healthHoax": {
+      "REAL": 0,
+      "FAKE": 5
+    },
+    "healthNews": {
+      "REAL": 8,
+      "FAKE": 0
+    },
+    "hoaxNews": {
+      "REAL": 0,
+      "FAKE": 5
+    },
+    "politicsNews": {
+      "REAL": 992,
+      "FAKE": 0
+    },
+    "scienceHoax": {
+      "REAL": 0,
+      "FAKE": 4
+    },
+    "scienceNews": {
+      "REAL": 5,
+      "FAKE": 0
+    },
+    "techHoax": {
+      "REAL": 0,
+      "FAKE": 4
+    },
+    "techNews": {
+      "REAL": 6,
+      "FAKE": 0
+    }
+  },
+  "groups_with_real": 6,
+  "groups_with_fake": 5,
+  "confounding_score": 1.0,
+  "out_of_source_split_feasible": true,
+  "interpretation": "Both classes appear in multiple groups, so an out-of-source holdout (groups held out of training) is feasible and was attempted."
+}

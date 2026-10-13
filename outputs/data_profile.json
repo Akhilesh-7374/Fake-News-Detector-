@@ -1,0 +1,11 @@
+{
+  "total_rows": 2038,
+  "rows_after_deduplication": 2038,
+  "duplicate_rows_removed": 0,
+  "class_balance": {
+    "REAL": 1021,
+    "FAKE": 1017
+  },
+  "text_column_used": "text",
+  "title_column_used": false
+}

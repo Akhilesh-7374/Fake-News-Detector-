@@ -1,0 +1,20 @@
+[
+  {
+    "id": "demo-1",
+    "title": "Government publishes a new education funding proposal",
+    "content": "Officials published a proposal describing changes to education funding and invited public comments.",
+    "url": "https://demo.example/news/education",
+    "source_name": "Demo Wire",
+    "source_domain": "demo.example",
+    "published_at": "2026-09-11T08:00:00+00:00"
+  },
+  {
+    "id": "demo-2",
+    "title": "Viral post claims a mysterious law takes effect tomorrow",
+    "content": "A viral post claims that every citizen will automatically receive a large payment tomorrow, but the post provides no official document or primary source.",
+    "url": "https://demo.example/news/viral",
+    "source_name": "Demo Viral",
+    "source_domain": "viral-blog.example",
+    "published_at": "2026-09-11T08:05:00+00:00"
+  }
+]

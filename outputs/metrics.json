@@ -1,0 +1,199 @@
+{
+  "model": "TF-IDF + Logistic Regression",
+  "label_mapping": {
+    "0": "REAL",
+    "1": "FAKE"
+  },
+  "random_state": 42,
+  "threshold": 0.5,
+  "source_artifacts_stripped": true,
+  "probability_calibrated": true,
+  "dataset_profile": {
+    "total_rows": 2038,
+    "rows_after_deduplication": 2038,
+    "duplicate_rows_removed": 0,
+    "class_balance": {
+      "REAL": 1021,
+      "FAKE": 1017
+    },
+    "text_column_used": "text",
+    "title_column_used": false
+  },
+  "validation_protocol": {
+    "holdout_test_size": 0.2,
+    "split_strategy": "stratified train/test split",
+    "cross_validation": "3-fold StratifiedKFold on training split only"
+  },
+  "cross_validation_train_only": {
+    "accuracy": {
+      "mean": 0.9926357743834182,
+      "std": 0.0030101184243022773
+    },
+    "macro_f1": {
+      "mean": 0.9926356703728999,
+      "std": 0.0030101134830679633
+    },
+    "roc_auc": {
+      "mean": 0.9996790796931888,
+      "std": 0.0002911372332123065
+    }
+  },
+  "train": {
+    "threshold": 0.5,
+    "accuracy": 0.9975460122699387,
+    "precision_fake": 0.998766954377312,
+    "recall_fake": 0.996309963099631,
+    "f1_fake": 0.9975369458128078,
+    "macro_f1": 0.9975459790188734,
+    "confusion_matrix": [
+      [
+        816,
+        1
+      ],
+      [
+        3,
+        810
+      ]
+    ],
+    "classification_report": {
+      "REAL": {
+        "precision": 0.9963369963369964,
+        "recall": 0.9987760097919217,
+        "f1-score": 0.9975550122249389,
+        "support": 817.0
+      },
+      "FAKE": {
+        "precision": 0.998766954377312,
+        "recall": 0.996309963099631,
+        "f1-score": 0.9975369458128078,
+        "support": 813.0
+      },
+      "accuracy": 0.9975460122699387,
+      "macro avg": {
+        "precision": 0.9975519753571542,
+        "recall": 0.9975429864457763,
+        "f1-score": 0.9975459790188734,
+        "support": 1630.0
+      },
+      "weighted avg": {
+        "precision": 0.9975489938135464,
+        "recall": 0.9975460122699387,
+        "f1-score": 0.9975460011862503,
+        "support": 1630.0
+      }
+    },
+    "split": "train",
+    "roc_auc": 0.999990966861933,
+    "average_precision": 0.9999909279669086
+  },
+  "holdout_test": {
+    "threshold": 0.5,
+    "accuracy": 0.9926470588235294,
+    "precision_fake": 1.0,
+    "recall_fake": 0.9852941176470589,
+    "f1_fake": 0.9925925925925926,
+    "macro_f1": 0.9926466612598,
+    "confusion_matrix": [
+      [
+        204,
+        0
+      ],
+      [
+        3,
+        201
+      ]
+    ],
+    "classification_report": {
+      "REAL": {
+        "precision": 0.9855072463768116,
+        "recall": 1.0,
+        "f1-score": 0.9927007299270073,
+        "support": 204.0
+      },
+      "FAKE": {
+        "precision": 1.0,
+        "recall": 0.9852941176470589,
+        "f1-score": 0.9925925925925926,
+        "support": 204.0
+      },
+      "accuracy": 0.9926470588235294,
+      "macro avg": {
+        "precision": 0.9927536231884058,
+        "recall": 0.9926470588235294,
+        "f1-score": 0.9926466612598,
+        "support": 408.0
+      },
+      "weighted avg": {
+        "precision": 0.9927536231884058,
+        "recall": 0.9926470588235294,
+        "f1-score": 0.9926466612598,
+        "support": 408.0
+      }
+    },
+    "split": "holdout_test",
+    "roc_auc": 0.9998558246828143,
+    "average_precision": 0.99985698549236
+  },
+  "source_confounding": {
+    "group_col": "subject",
+    "available": true,
+    "n_groups": 11,
+    "crosstab": {
+      "News": {
+        "REAL": 0,
+        "FAKE": 999
+      },
+      "financeNews": {
+        "REAL": 6,
+        "FAKE": 0
+      },
+      "generalNews": {
+        "REAL": 4,
+        "FAKE": 0
+      },
+      "healthHoax": {
+        "REAL": 0,
+        "FAKE": 5
+      },
+      "healthNews": {
+        "REAL": 8,
+        "FAKE": 0
+      },
+      "hoaxNews": {
+        "REAL": 0,
+        "FAKE": 5
+      },
+      "politicsNews": {
+        "REAL": 992,
+        "FAKE": 0
+      },
+      "scienceHoax": {
+        "REAL": 0,
+        "FAKE": 4
+      },
+      "scienceNews": {
+        "REAL": 5,
+        "FAKE": 0
+      },
+      "techHoax": {
+        "REAL": 0,
+        "FAKE": 4
+      },
+      "techNews": {
+        "REAL": 6,
+        "FAKE": 0
+      }
+    },
+    "groups_with_real": 6,
+    "groups_with_fake": 5,
+    "confounding_score": 1.0,
+    "out_of_source_split_feasible": true,
+    "interpretation": "Both classes appear in multiple groups, so an out-of-source holdout (groups held out of training) is feasible and was attempted."
+  },
+  "out_of_source_holdout": null,
+  "notes": [
+    "Holdout metrics are more meaningful than training metrics, but the included dataset has known source/style leakage.",
+    "See outputs/leakage_report.json before making real-world claims.",
+    "Source artifacts (Reuters datelines/mentions) were stripped before training; this metric is a more honest estimate of style-based separability."
+  ]
+}

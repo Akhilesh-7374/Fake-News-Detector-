@@ -1,0 +1,58 @@
+{
+  "subject_distribution": {
+    "FAKE": {
+      "News": 999,
+      "financeNews": 0,
+      "generalNews": 0,
+      "healthHoax": 5,
+      "healthNews": 0,
+      "hoaxNews": 5,
+      "politicsNews": 0,
+      "scienceHoax": 4,
+      "scienceNews": 0,
+      "techHoax": 4,
+      "techNews": 0
+    },
+    "REAL": {
+      "News": 0,
+      "financeNews": 6,
+      "generalNews": 4,
+      "healthHoax": 0,
+      "healthNews": 8,
+      "hoaxNews": 0,
+      "politicsNews": 992,
+      "scienceHoax": 0,
+      "scienceNews": 5,
+      "techHoax": 0,
+      "techNews": 6
+    }
+  },
+  "contains_reuters_by_label": {
+    "FAKE": {
+      "count": 8,
+      "rate": 0.007866273352999017
+    },
+    "REAL": {
+      "count": 990,
+      "rate": 0.9696376101860921
+    }
+  },
+  "heuristic_contains_reuters_accuracy": 0.9808635917566242,
+  "date_examples_by_label": {
+    "FAKE": [
+      "31-Dec-17",
+      "31-Dec-17",
+      "30-Dec-17",
+      "29-Dec-17",
+      "25-Dec-17"
+    ],
+    "REAL": [
+      "31-Dec-17",
+      "29-Dec-17",
+      "31-Dec-17",
+      "30-Dec-17",
+      "29-Dec-17"
+    ]
+  },
+  "interpretation": "High performance on this dataset can be inflated by source/style artifacts. Use external validation before making real-world claims."
+}
